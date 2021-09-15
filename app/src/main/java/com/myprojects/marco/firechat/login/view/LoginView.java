@@ -25,7 +25,7 @@ public class LoginView extends CoordinatorLayout implements LoginDisplayer {
     private View loginButton;
     private View forgotButton;
     private View registerButton;
-    private View googleButton;
+    //private View googleButton;
 
     public LoginView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -43,7 +43,7 @@ public class LoginView extends CoordinatorLayout implements LoginDisplayer {
         loginButton = this.findViewById(R.id.loginButton);
         forgotButton = this.findViewById(R.id.forgotButton);
         registerButton = this.findViewById(R.id.registerButton);
-        googleButton = this.findViewById(R.id.google);
+       // googleButton = this.findViewById(R.id.google);
     }
 
     @Override
@@ -68,17 +68,17 @@ public class LoginView extends CoordinatorLayout implements LoginDisplayer {
                 actionListener.onRegistrationSelected();
             }
         });
-        googleButton.setOnClickListener(new OnClickListener() {
+        /*googleButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 actionListener.onGooglePlusLoginSelected();
             }
-        });
+        });*/
     }
 
     @Override
     public void detach(LoginActionListener actionListener) {
-        googleButton.setOnClickListener(null);
+        //googleButton.setOnClickListener(null);
         loginButton.setOnClickListener(null);
     }
 
